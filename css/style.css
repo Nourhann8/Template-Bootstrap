@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ .btnbefo:active::before, .btn:hover::before {
+    display: block;
+}
+.btnbefo {
+    position: relative;
+    left: 30px;
+}
+.btnbefo::before{
+position: absolute;
+    content: "";
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent lightblue transparent;
+    top: 20px;
+    left: 13px;
+    display: none;
+}
+.btnbefo::after{
+position: absolute;
+content: " ";
+height: 40px;
+width: 80px;
+background-color: lightblue;
+top: 40px;
+left: -15px;
+border-radius: 5px;
+display: none;
+}
+.btnbefo:hover::after {
+    content: "copy to clipboard";
+    display: block;
+}
+.fixedimg {
+    background-attachment: fixed;
+    background-size: cover;
+    height: 260px;
+    /* background-position: top; */
+}
+.fixedimg1 {
+    background-image: url(../images/picture5.jpg);
+}
+.fixedimg2 {
+    background-image: url(../images/picture6.jpg);
+} 
